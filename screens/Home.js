@@ -10,7 +10,7 @@ const ListButton = ({title,color, onPress, onDelete}) => {
             style={[styles.itemContainer, {backgroundColor: color}]}
             onPress={onPress}
         >
-            <view><Text style={styles.itemTitle}>{title}</Text></view>
+            <View><Text style={styles.itemTitle}>{title}</Text></View>
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity onPress={() => {}}>
                     <Ionicons name="options-outline" size={24} color="white" />
@@ -57,7 +57,7 @@ export default ({navigation}) => {
         <View style={styles.container}>
             <FlatList 
                 data= {Lists}
-                     renderItem={({item: { title, color } , index}) => {
+                    renderItem={({item: { title, color } , index}) => {
                     return(
                         <ListButton 
                             title={title} 
